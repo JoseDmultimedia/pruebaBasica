@@ -1,18 +1,16 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {StyleSheet, Text, View} from 'react-native';
-import TextForm from './src/components/TextForm/TextForm';
-import Saludar from './src/components/Saludar/Saludar';
+import {StyleSheet} from 'react-native';
+import NavigationStack from './src/navigation/NavigationStack';
+import NavigationTab from './src/navigation/NavigationTab';
+import NavigationDrawer from './src/navigation/NavigationDrawer';
 
 function App(): JSX.Element {
   return (
     <NavigationContainer>
-      <View style={styles.container}>
-        <Text>Hola mundo esta es una app</Text>
-        <TextForm variable="1" varible2={2} />
-        <Saludar name={'jose dav'} age={3} />
-        <Saludar />
-      </View>
+      {/* <NavigationStack></NavigationStack> */}
+      {/* <NavigationTab></NavigationTab> */}
+      <NavigationDrawer></NavigationDrawer>
     </NavigationContainer>
   );
 }
